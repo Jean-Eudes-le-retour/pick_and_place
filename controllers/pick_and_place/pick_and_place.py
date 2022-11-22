@@ -8,7 +8,7 @@ robot = Robot()
 # Get the time step of the current world.
 timestep = int(robot.getBasicTimeStep())
 
-# Inizialize base motors.
+# Initialize base motors.
 wheels = []
 wheels.append(robot.getDevice("wheel1"))
 wheels.append(robot.getDevice("wheel2"))
@@ -50,7 +50,7 @@ finger2 = robot.getDevice("finger2")
 # Set the maximum motor velocity.
 finger1.setVelocity(0.03)
 finger2.setVelocity(0.03)
-# Read the miminum and maximum position of the gripper motors.
+# Read the minium and maximum position of the gripper motors.
 fingerMinPosition = finger1.getMinPosition()
 fingerMaxPosition = finger1.getMaxPosition()
 
@@ -128,6 +128,9 @@ robot.step(310 * timestep)
 # Stop.
 for wheel in wheels:
     wheel.setVelocity(0.0)
+
+# Correct arm position
+armMotors[0].setPosition(-0.05)
 
 # Move arm down
 armMotors[3].setPosition(0)
