@@ -129,9 +129,6 @@ robot.step(310 * timestep)
 for wheel in wheels:
     wheel.setVelocity(0.0)
 
-# Correct arm position
-armMotors[0].setPosition(-0.05)
-
 # Move arm down
 armMotors[3].setPosition(0)
 armMotors[2].setPosition(-0.3)
