@@ -1,7 +1,7 @@
 publish: true
 type: benchmark
 world:
-  file: worlds/robot_programming.wbt
-  max-duration: 30
-  metric: percent
-dockerCompose: theia:webots-project/controllers/edit_me/
+  file: worlds/pick_and_place.wbt
+  max-duration: 80
+  metric: time-speed
+dockerCompose: theia:webots-project/controllers/pick_and_place/
